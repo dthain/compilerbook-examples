@@ -4,8 +4,12 @@ Example Code for Compilers Course
 This repository contains example code and test cases
 for the CSE 40243 compilers course at the University of Notre Dame.
 
-- calculator contains a small example of using bison and flex
-together to parse and evaluate simple arithmetic expressions.
-This code would be a good place to start as you design your compiler
-for CMinor.
+- calc1 contains a small example of using bison and flex
+together to parse and evaluate simple arithmetic expressions,
+by computing results as they are parsed.
+
+- calc2 contains a more complex example of using bison and
+flex to parse arithmetic expressions and convert them into
+a simple abstract syntax tree of expressions. This 
+would be a good place to start as you design your compiler.
  

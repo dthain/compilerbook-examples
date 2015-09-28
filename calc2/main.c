@@ -14,7 +14,7 @@ extern struct expr * parser_result;
 
 int main( int argc, char *argv[] )
 {
-	printf("CSE 40243 Expression Parser\n");
+	printf("CSE 40243 Expression Compiler\n");
 	printf("Enter an infix expression using the operators +-*/() ending with ;\n\n");
 
 	if(yyparse()==0) {
