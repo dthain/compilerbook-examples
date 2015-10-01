@@ -16,4 +16,6 @@ by computing results as they are parsed.
 flex to parse arithmetic expressions and convert them into
 a simple abstract syntax tree of expressions. This 
 would be a good place to start as you design your compiler.
- 
+
+- cminor contains the starter code for the CMinor project,
+starting with the AST for the parser assignment.
