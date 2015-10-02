@@ -40,3 +40,12 @@ The hash table will point to objects of type `symbol` so
 as to match variables names (`x`) with their definitions,
 like "parameter 3" or "global integer x".
 
+For the code generation assignment:
+
+The module 'library.c' contains the "standard library" for cminor,
+which is needed to implement the print statement and the exponentiation
+operator.  You are welcome to add items to the library if you find
+it helpful.  Set up your Makefile carefully: library.c should be
+linked against a compiled cminor program, not against the compiler itself.
+
+
