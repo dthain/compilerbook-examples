@@ -19,3 +19,7 @@ would be a good place to start as you design your compiler.
 
 - cminor contains the starter code for the CMinor project,
 starting with the AST for the parser assignment.
+
+- tests contains the hidden instructors' tests that
+were used to evaluate each programming assignment.
+

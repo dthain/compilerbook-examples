@@ -1,0 +1,9 @@
+This directory contains the instructors' tests used to evaluate
+the scanner assignment, in addition to the students' submitted
+tests.  good*.cminor should scan correctly, and bad*.cminor should not.
+Note that the good files will not necessarily parse, typecheck,
+or compile, they are just sequences of valid tokens.
+
+Note that run_all_tests.sh will quickly test your compiler on
+all the tests, assuming that it is in your path and produces
+a proper exit code from main (which it should!)
