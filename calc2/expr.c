@@ -8,16 +8,23 @@
 Create one node in an expression tree and return the structure.
 */
 
-struct expr * expr_create( expr_t kind, double value, struct expr *left, struct expr *right )
+struct expr * expr_create( expr_t kind, struct expr *left, struct expr *right )
 {
 	/* Shortcut: sizeof(*e) means "the size of what e points to" */
 	struct expr *e = malloc(sizeof(*e));
 
 	e->kind = kind;
-	e->value = value;
+	e->value = 0;
 	e->left = left;
 	e->right = right;
 
+	return e;
+}
+
+struct expr * expr_create_value( double value )
+{
+	struct expr *e = expr_create(EXPR_VALUE,0,0);
+	e->value = value;
 	return e;
 }
 

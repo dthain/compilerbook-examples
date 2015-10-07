@@ -55,17 +55,17 @@ program : expr TOKEN_SEMI
 	;
 
 expr	: expr TOKEN_ADD term
-		{ $$ = expr_create(EXPR_ADD,0,$1,$3); }
+		{ $$ = expr_create(EXPR_ADD,$1,$3); }
 	| expr TOKEN_SUBTRACT term
-		{ $$ = expr_create(EXPR_SUBTRACT,0,$1,$3); }
+		{ $$ = expr_create(EXPR_SUBTRACT,$1,$3); }
 	| term
 		{ $$ = $1; }
 	;
 
 term	: term TOKEN_MULTIPLY factor
-		{ $$ = expr_create(EXPR_MULTIPLY,0,$1,$3); }
+		{ $$ = expr_create(EXPR_MULTIPLY,$1,$3); }
 	| term TOKEN_DIVIDE factor
-		{ $$ = expr_create(EXPR_DIVIDE,0,$1,$3); }
+		{ $$ = expr_create(EXPR_DIVIDE,$1,$3); }
 	| factor
 		{ $$ = $1; }
 	;
@@ -73,9 +73,9 @@ term	: term TOKEN_MULTIPLY factor
 factor	: TOKEN_LPAREN expr TOKEN_RPAREN
 		{ $$ = $2; }
 	| TOKEN_SUBTRACT factor
-		{ $$ = expr_create(EXPR_SUBTRACT,0,expr_create(EXPR_VALUE,0,0,0),$2); }
+		{ $$ = expr_create(EXPR_SUBTRACT,expr_create_value(0),$2); }
 	| TOKEN_FLOAT
-		{ $$ = expr_create(EXPR_VALUE,atof(yytext),0,0); }
+		{ $$ = expr_create_value(atof(yytext)); }
 	;
 
 %%

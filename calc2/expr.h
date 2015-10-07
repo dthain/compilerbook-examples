@@ -26,7 +26,9 @@ struct expr {
        struct expr *right;
 };
 
-struct expr * expr_create( expr_t kind, double value, struct expr *left, struct expr *right );
+struct expr * expr_create( expr_t kind, struct expr *left, struct expr *right );
+struct expr * expr_create_value( double value );
+
 void          expr_print( struct expr *e );
 void          expr_delete( struct expr *e );
 double        expr_evaluate( struct expr *e );
