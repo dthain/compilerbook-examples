@@ -1,0 +1,94 @@
+/*
+This program displays a square bouncing around on the screen.
+Click to reset the square in a new place.
+It makes use of the (included) C gfx library and the standard C library,
+and exercises, loops, comparisons, and logical operators.
+*/
+
+/* These are the functions in the gfx library. */
+gfx_open: function void ( width: integer, height: integer, title:string );
+gfx_point: function void ( x: integer, y: integer );
+gfx_line: function void ( x1:integer, y1:integer, x2:integer, y2:integer );
+gfx_color: function void ( red:integer, green: integer, blue:integer );
+gfx_clear: function void ();
+gfx_clear_color: function void ( red:integer, green: integer, blue:integer );
+gfx_wait: function char ();
+gfx_xpos: function integer ();
+gfx_ypos: function integer ();
+gfx_xsize: function integer ();
+gfx_ysize: function integer ();
+gfx_event_waiting: function boolean ();
+gfx_flush: function integer ();
+
+/* These functions come from the C standard library. */
+
+usleep: function void ( usecs: integer );
+rand: function integer();
+
+draw_box: function void ( x: integer, y:integer, size: integer ) =
+{
+	gfx_color(255,255,255);
+	gfx_line(x,y,x+size,y);
+	gfx_line(x+size,y,x+size,y+size);
+	gfx_line(x+size,y+size,x,y+size);
+	gfx_line(x,y+size,x,y);
+}
+
+/*
+Note that the precision multiplier indicates fixed-point
+match to keep track of sub-pixel position and velocity for the box.
+*/
+
+main: function integer () =
+{
+	precision: integer = 100;
+
+	xsize: integer = 500; // pixels
+	ysize: integer = 500; // pixels 
+
+	x: integer = precision * xsize / 2;
+	y: integer = precision * ysize / 2;
+
+	vx: integer = precision * 3;
+	vy: integer = precision * -5 ;
+
+	deltat: integer = 100;
+
+	gfx_open(xsize,ysize,"Bounce!");
+
+	while(true) {
+		print "x: ", x, " y: ", y, " vx: ", vx, " vy: ", vy, "\n";
+
+		if(gfx_event_waiting()) {
+			c: char;
+			c = gfx_wait();
+			if(c=='q') return 0;
+			x = gfx_xpos()*precision;
+			y = gfx_ypos()*precision;
+			vx = 5*precision;
+		}
+
+		vy = vy + 1 * precision;
+
+		if(x<0 && vx<0) {
+			vx = -9*vx/10;
+		}	
+
+		if(x>(xsize*precision) && vx>0) {
+			vx = -9*vx/10;
+		}
+
+		if(y>(ysize*precision) && vy>0) {
+			vy = -9*vy/10;
+		}
+
+		x = x + vx*deltat/precision;
+		y = y + vy*deltat/precision;
+
+		gfx_clear();
+		draw_box(x/precision,y/precision,25);
+		gfx_flush();
+
+		usleep(deltat*precision);
+	}
+}

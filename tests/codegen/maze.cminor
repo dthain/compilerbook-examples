@@ -1,0 +1,33 @@
+/*
+This test program prints out a maze generated
+by alternating slash and backslash randomly.
+It relies on the rand, srand, and time functions
+found in the C standard library.
+*/
+
+rand: function integer ();
+srand: function void ( seed: integer );
+time: function integer ( zero: integer );
+
+main: function void () =
+{
+	xsize: integer = 20;
+	ysize: integer = 20;
+
+	srand(time(0));
+
+	i: integer;
+	j: integer;
+	
+	for(j=0;j<ysize;j++) {
+		for(i=0;i<xsize;i++) {
+			if(rand()%2==1) {
+				print '/';
+			} else {
+				print '\\';
+			}
+		}
+		print "\n";
+	}
+}
+
