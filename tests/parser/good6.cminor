@@ -1,0 +1,33 @@
+// test block creations
+x:integer;
+main:function void() = {
+	for(;;)
+	{
+		x:integer = 5;
+		{
+			x:integer = 6;
+			print x;
+		}
+	}
+
+	if(x > 5)
+	{
+		x++;
+	}
+}
+funct2: function void() = {
+	{
+		print "hello";
+	}
+	if(x > 5)
+		if(x < 5)
+		{
+			x++;
+		}
+	else
+	{
+		x++;
+		x--;
+	}		
+	
+}

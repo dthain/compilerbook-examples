@@ -1,0 +1,5 @@
+// semicolon isn't a statement
+fxn:function void() =
+{
+	;
+}

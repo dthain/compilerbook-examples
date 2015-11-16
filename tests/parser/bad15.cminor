@@ -1,0 +1,2 @@
+//arrays must have brackets in decleration
+x:array integer = {1, 2,3,4};

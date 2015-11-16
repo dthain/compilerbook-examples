@@ -1,0 +1,5 @@
+//checking param lists with trailing ,
+main:function void(hello:string, )=
+{
+	print hello;
+}

@@ -1,0 +1,8 @@
+// test types of literals
+x:integer = 5;
+c:char = 'A';
+str:string = "hello";
+iarr: array [4] integer = {1,2,3,4};
+carr:array [4] char = {'a', 'b', 'c', 'd'};
+barr:array [4] boolean = {true, false, true, true};
+iaar: array [4] array [4] integer = {iarr, iarr, iarr, iarr};

@@ -1,0 +1,22 @@
+//tests param lists
+fxn: function integer (x:integer)=
+{
+	return x++;
+}
+
+fxn2: function char (x:integer, y:char, z:boolean)=
+{
+	if(y=='z')
+		return 'Z';
+	else
+		return 'z';
+}
+
+fxn3: function char (x: array [] integer, y:char, z: array [] array [] boolean)=
+{
+	if(y=='z')
+		return 'Z';
+	else
+		return 'z';
+}
+

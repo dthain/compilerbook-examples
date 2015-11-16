@@ -1,0 +1,8 @@
+// expressions must end with ;
+x:integer = 5;
+
+main:function void()=
+{
+	x++;
+	x++
+}

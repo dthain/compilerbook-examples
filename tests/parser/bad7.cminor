@@ -1,0 +1,7 @@
+// if must be matched
+x:integer = 5;
+main:function void()=
+{
+	x++;
+	if(x > 5)
+}

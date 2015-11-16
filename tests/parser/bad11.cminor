@@ -1,0 +1,7 @@
+// test function calls with wrong format in calls
+
+main: function void () =
+{
+	print x;
+	func3(4 y, z);
+}

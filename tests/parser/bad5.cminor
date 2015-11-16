@@ -1,0 +1,6 @@
+//print not seperated by ,'s
+x:intger = 5;
+main:function void()
+{
+	print x x "hello";
+}

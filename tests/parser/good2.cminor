@@ -1,0 +1,11 @@
+// variables in and out of fxns
+x:integer = 5;
+y:integer;
+z:char = 'A';
+fxn: function void () =
+{
+	x:integer;
+	y:integer = 16;
+	w:boolean = true;
+	q:boolean;
+}
