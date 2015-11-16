@@ -1,0 +1,6 @@
+// two multiples should generate parse error
+main: function void() =
+{
+	x:integer = 5 ** 5;
+	print x;
+}

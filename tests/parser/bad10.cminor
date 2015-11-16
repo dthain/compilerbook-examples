@@ -1,0 +1,20 @@
+// test else without a if to match it
+x:integer;
+funct2: function void() = {
+			if(x < 5)
+			{
+				x++;
+			}
+			else
+			{
+				x++;
+				x--;
+			}
+		 
+	else 
+	{
+		print "error, this shouldn't work";
+	}
+			
+	
+}

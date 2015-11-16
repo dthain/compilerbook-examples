@@ -1,0 +1,5 @@
+//checking param lists
+main:function void("hello", x:integer) =
+{
+	print x;
+}

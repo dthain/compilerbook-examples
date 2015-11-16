@@ -1,0 +1,11 @@
+// produces correct precedence of operations
+
+main: function void () = {
+	x:integer = 5;
+	y:integer = 4;
+	if(true || false && true)
+	{
+		x = 6;
+		
+	}
+}

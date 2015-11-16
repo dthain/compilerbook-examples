@@ -1,0 +1,14 @@
+//solved if else works
+
+main: function void() = {
+	x:integer = 5;
+	if( 4 < 5 )
+		if( 10 < 20 )
+			for(x = 0; x < 5; x++)
+				if( 4 < 5 )
+					print "helloo\n";
+				else
+					print "hello\n";
+		else
+			print "goodbye";
+}

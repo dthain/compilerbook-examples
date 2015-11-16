@@ -1,0 +1,7 @@
+// produces correct precedence of operations
+
+main: function void() = {
+	x:integer = 5;
+	y:integer = 4;
+	z:boolean  = true || -(4*x^5) + (4 - 4) >= 16 - 6 * 3 + x && y^2 == 16;
+}

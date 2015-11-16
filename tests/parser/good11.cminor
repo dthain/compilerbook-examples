@@ -1,0 +1,10 @@
+// test print statements
+str:string = "this is a string";
+str2:string;
+x:integer;
+main: function void () = {
+	print;
+	print "\n \r \t \0";
+	print x, y, "hello", true, false;
+	print str, " str ", x, str2; 
+}

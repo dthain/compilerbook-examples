@@ -1,0 +1,28 @@
+// test function calls
+func1: function integer (x:integer, y:char) =
+{
+	print x;
+	return 1;
+}
+func2: function integer (y:char) =
+{
+	print x;
+	return 2;
+}
+func3: function integer (x:integer, y:char, z:string)=
+{
+	print z;
+	return 4;
+}
+
+main: function void ()=
+{
+	x:integer = 4;
+	y:char = 'c';
+	z:string = "hello";
+	func2('c');
+	func2(y);
+	func1(42, y);
+	func1(x, 'c');
+	func3(4, y, z);
+}

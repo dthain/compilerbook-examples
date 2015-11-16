@@ -1,0 +1,2 @@
+// can't use anything but print in this form
+printf "hello world", x, y;

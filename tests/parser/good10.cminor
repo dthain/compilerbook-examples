@@ -1,0 +1,14 @@
+//some variable usages
+x:integer;
+y:integer;
+z:integer;
+arr:array[5] array[5] integer;
+str: string = "hello world";
+fxn : function  integer () =
+{
+	arr[3][2] = 5;
+	x = arr[2][3];
+	x++;
+	return z;
+	c:char = str[0];
+} 
