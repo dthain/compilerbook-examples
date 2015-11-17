@@ -1,7 +1,7 @@
 //test expressions inside of array indexes
 arr:array [5] integer = {0,1,2,3,4};
 
-void main()
+main:function void() =
 {
 	x:integer = 5;
 	y:integer = 3;

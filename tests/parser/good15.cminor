@@ -56,7 +56,7 @@ main: function integer () =
 
 	gfx_open(xsize,ysize,"Bounce!");
 
-	while(true) {
+	for(;;) {
 		print "x: ", x, " y: ", y, " vx: ", vx, " vy: ", vy, "\n";
 
 		if(gfx_event_waiting()) {
