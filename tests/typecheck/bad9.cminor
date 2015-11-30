@@ -1,0 +1,12 @@
+//Can't index array with a boolean
+x:array [5] integer = {1,2,3,4,5};
+main:function void () =
+{
+	x[4] = intFxn();;
+//	x[true] = 4;
+	
+}
+intFxn:function integer ()=
+{
+	return 3;
+}

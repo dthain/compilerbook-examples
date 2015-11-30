@@ -1,0 +1,25 @@
+// test functions declerations
+
+//test1:function integer (a:integer, b:integer);
+//test2:function boolean (a:integer, b:integer);
+//test3:function string (a:integer);
+
+main:function void ()=
+{
+
+}
+test1:function integer (a:integer, b:integer)=
+{
+	return a + b;
+}
+test2:function boolean (a:integer, b:integer)=
+{
+	return test2(a, b);
+}
+test3:function char (a:integer)=
+{
+	if (a > 5)
+	{
+		return 'a';
+	}
+}

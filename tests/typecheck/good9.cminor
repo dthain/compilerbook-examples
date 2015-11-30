@@ -1,0 +1,13 @@
+// test 1d array assignments with function calls
+x:array [5] integer = {1,2,3,4,5};
+intFxn: function integer ();
+main:function void () =
+{
+	x[4] = intFxn();
+	x[intFxn()] = 4;
+	
+}
+intFxn:function integer ()=
+{
+	return 3;
+}

@@ -1,0 +1,11 @@
+// Test incompatible types
+y:integer = 10;
+main:function void ()=
+{
+	if(y > 5 && 'a' || true)
+	{
+		print "ok";
+	}
+}
+	
+

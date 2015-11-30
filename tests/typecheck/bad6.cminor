@@ -1,0 +1,21 @@
+// wrong function prototype
+
+ test1:function integer (a:integer, b:integer);
+test2:function boolean (a:integer, b:integer);
+test3:function string (a:integer);
+
+main:function void ()=
+{
+	str:string = "hi";
+	
+}
+//mismatched return type
+test3:function string (a:integer)=
+{
+	return "hello!";
+}
+test2:function integer (a:integer, b:integer) =
+{ 
+	return a + b;
+}
+
