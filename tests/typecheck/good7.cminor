@@ -1,0 +1,26 @@
+// test functions with invocations and prototypes
+
+test1:function integer (a:integer, b:integer);
+test2:function boolean (a:integer, b:integer);
+test3:function string (a:integer);
+main:function void ()=
+{
+	x:integer = test1(5, 6);
+	test2(5, 6);
+	print test3(7);
+}
+test1:function integer (a:integer, b:integer)=
+{
+	return a + b;
+}
+test2:function boolean (a:integer, b:integer)=
+{
+	return a==b;
+}
+test3:function string (a:integer)=
+{
+	if (test1(1, 5) > 6)
+	{
+		return "hello world";
+	}
+}

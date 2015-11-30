@@ -1,0 +1,43 @@
+// test character comparisions/headers
+intFxn: function integer(c:char);
+glob:integer = 1;
+
+main:function void ()=
+{
+c:integer;
+	if(6 == intFxn('c'))
+	{
+		print "unreachable";
+	}
+	if(5 >= 5)
+	{
+		print "unreachable";
+	}
+	if(c > 5)
+	{
+		print "unreachable";
+	}
+	if(c >= 5)
+	{
+		print "unreachable";
+	}
+	if(intFxn('a') <= 5)
+	{
+		print "reachable";
+	}
+	if(glob < 5)
+	{
+		print "reachable";
+	}
+	
+
+}
+intFxn: function integer(c:char)=
+{
+	if(c == 'a')
+	{
+		return 5;
+	}
+	return 0;
+}
+

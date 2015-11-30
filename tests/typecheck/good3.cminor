@@ -1,0 +1,21 @@
+// test resolving multiple layers of depth
+x:integer = 5;
+y:integer = 10;
+main:function void ()=
+{
+	x:integer = 5;
+	y:integer = 10;
+	{
+		
+		x:integer = 5;
+		y:integer = 10;
+		{
+			
+			x:char = 'a';
+			y:integer = 10;
+		}
+		y = x + y;
+	}
+}
+	
+

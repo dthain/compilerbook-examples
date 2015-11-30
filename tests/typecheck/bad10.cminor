@@ -1,0 +1,7 @@
+// test 2d array assignment to 1d array
+x:array [5] integer;
+y:array [5] array [5] integer;
+main:function void () =
+{
+	y = x;
+}

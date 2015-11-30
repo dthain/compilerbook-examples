@@ -1,0 +1,12 @@
+// test 2d array assignments between arrays
+x:array [5] integer = {1,2,3,4,5};
+y:array [5] array [5] integer;
+main:function void () =
+{
+	y[1] = x;
+	count:integer;
+	for(count = 0; count < 5; count++)
+	{
+		y[count] = x;
+	} 	
+}

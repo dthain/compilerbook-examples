@@ -1,0 +1,6 @@
+// test 1d array assignments to a literal
+x:array [5] integer = {1,2,3,4,5};
+main:function void () =
+{
+	x = 4;
+}

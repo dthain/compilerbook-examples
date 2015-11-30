@@ -1,0 +1,7 @@
+//test fxn return types
+main:function integer ()=
+{
+
+	return 'c'
+
+}
