@@ -1,0 +1,6 @@
+// Adds a global variable
+x:integer=5;
+main:function integer ()=
+{
+	return x + x;
+}

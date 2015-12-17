@@ -1,0 +1,5 @@
+// tests addition
+main:function integer ()=
+{
+	return 8 + 2;
+}

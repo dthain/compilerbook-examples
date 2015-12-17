@@ -1,0 +1,11 @@
+// Uses a complex expression, with a function call
+x:integer=5;
+fxnCall:function integer() =
+{
+	return x*4;
+}
+main:function integer () =
+{
+	y:integer = 2;
+	return (x + 10) * y - fxnCall();
+}

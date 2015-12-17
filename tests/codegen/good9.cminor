@@ -1,0 +1,20 @@
+// tests if statements 
+x:integer = 5;
+main:function integer () =
+{
+	if(false)
+		x=15;
+	else
+		x=10;
+
+
+	if(true)
+	{
+		return x;
+	}
+	else
+	{
+		return 1;
+	}	
+	
+}

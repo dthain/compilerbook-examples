@@ -1,0 +1,7 @@
+// tests character printing
+i:char= 'i';
+main:function integer () =
+{
+	n:char ='n';
+	print 'h', i,' ', n, 'd'; 
+}

@@ -1,0 +1,15 @@
+// tests for loops
+x:integer = 1;
+main: function integer () =
+{
+	for(x = 0; x<10; x++)
+	{
+		print x, "\n";
+	}
+	y:integer = 0;
+	for(; y<10; y++)
+	{
+		print y, "\n";
+	}
+	x=0;
+}

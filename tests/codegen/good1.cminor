@@ -1,0 +1,4 @@
+main:function integer ()=
+{
+	return 10;
+}

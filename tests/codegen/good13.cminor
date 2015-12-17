@@ -1,0 +1,43 @@
+// tests comparisions/if statements with chars
+c:char = 'c';
+main: function integer () =
+{
+	a:char = 'a';
+	cdup:char = 'c';
+	
+	if(c == cdup )
+	{
+		print "should be printed\n";
+	}
+	else
+		print "shouldn't be printed\n";
+	
+	if(c != a )
+	{
+		print "should be printed\n";
+	}
+	else
+	{
+		print "shouldn't be printed\n";
+	}
+
+
+	//switched now (statement should be false)
+	if(c != cdup )
+	{
+		print "shouldn't be printed\n";
+	}
+	else
+	{
+		print "should be printed\n";
+	}
+	
+	if(c == a )
+	{
+		print "shouldn't be printed\n";
+	}
+	else
+	{
+		print "should be printed\n";
+	}
+}
