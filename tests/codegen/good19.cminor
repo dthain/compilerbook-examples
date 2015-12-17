@@ -1,0 +1,32 @@
+/*
+Display fibonnaci numbers from 0 to 45.
+This test exercises the ability of your
+compiler to call recursive functions.
+*/
+
+fib: function integer ( x: integer ) =
+{
+	if( x<1 ) {
+		return 0;
+	} else {
+		if(x<2) {
+			return 1;
+		} else {
+			return fib(x-1) + fib(x-2);
+		}
+	}
+}
+
+main: function integer ( argc: integer, argv: array [] string ) =
+{
+	i: integer;
+
+	print "Table of Fibonnacci Numbers\n";
+
+	for(i=0;i<30;i=i+1) {
+		print i, "\t", fib(i), "\n";
+	}
+
+	return 0;
+}
+

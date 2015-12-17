@@ -1,0 +1,5 @@
+// tests division
+main:function integer ()=
+{
+	return 20 / 2;
+}

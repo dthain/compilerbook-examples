@@ -1,0 +1,7 @@
+// tests print statements 
+x:integer=10;
+main:function integer () =
+{
+	print x;	
+	
+}

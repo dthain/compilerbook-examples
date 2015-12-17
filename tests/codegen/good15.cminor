@@ -1,0 +1,17 @@
+// tests infinite for loops
+x:integer = 1;
+main: function integer () =
+{
+	for(;;)
+	{
+		if(x<10)
+		{
+			print x, "\n";
+			x++;
+		}
+		else
+		{
+			return  10;
+		}
+	}	
+}

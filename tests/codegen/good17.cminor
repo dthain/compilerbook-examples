@@ -1,0 +1,23 @@
+// tests strings/string comparisions (compares addressses)
+str:string = "hello";
+str2:string = " world";
+main:function integer () =
+{
+	str3:string = str;
+	if(str == str3)
+	{
+		print str;
+	}
+	else
+	{
+		print "shouldn't be printed";
+	}
+	if(str != str2)
+	{
+		print str2;
+	}
+	else
+	{
+		print "shouldn't be printed";
+	}
+}
