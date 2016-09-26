@@ -8,16 +8,16 @@ typedef enum {
 	EXPR_SUB,
 	EXPR_MUL,
 	EXPR_DIV
-	/* many more types to add here */
+	/* many more kinds of exprs to add here */
 } expr_t;
 
 struct expr {
-	/* used by all expr types */
+	/* used by all kinds of exprs */
 	expr_t kind;
 	struct expr *left;
 	struct expr *right;
 
-	/* used by leaf expr types */
+	/* used by various leaf exprs */
 	const char *name;
 	struct symbol *symbol;
 	int literal_value;
