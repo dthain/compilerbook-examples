@@ -38,6 +38,7 @@ void expr_delete( struct expr *e )
 	if(!e) return;
 	expr_delete(e->left);
 	expr_delete(e->right);
+	free(e);
 }
 
 /*
