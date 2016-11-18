@@ -25,10 +25,11 @@ x = integer_power(a,b);
 */
 
 #include <stdio.h>
+#include <stdint.h>
 
-void print_integer( int x )
+void print_integer( long x )
 {
-	printf("%d",x);
+	printf("%ld",x);
 }
 
 void print_string( const char *s )
@@ -46,9 +47,9 @@ void print_character( char c )
 	printf("%c",c);
 }
 
-int integer_power( int x, int y )
+long integer_power( long x, long y )
 {
-	int result = 1;
+	long result = 1;
 	while(y>0) {
 		result = result * x;
 		y = y -1;
