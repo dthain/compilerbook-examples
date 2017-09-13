@@ -1,6 +1,6 @@
-This directory contains the instructors' tests used to evaluate
-the scanner assignment, in addition to the students' submitted
-tests.  good*.cminor should scan correctly, and bad*.cminor should not.
+This directory contains a number of example tests to exercise
+your scanner assignment.  (You should write some additional tests as well.)
+good*.cminor should scan correctly, and bad*.cminor should not.
 Note that the good files will not necessarily parse, typecheck,
 or compile, they are just sequences of valid tokens.
 
