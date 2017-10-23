@@ -20,6 +20,7 @@ for use by scanner.c.
 
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
 YYSTYPE is the lexical value returned by each rule in a bison grammar.
@@ -95,4 +96,5 @@ useful.  In practice, it often does not.
 int yyerror( char *str )
 {
 	printf("parse error: %s\n",str);
+	return 0;
 }

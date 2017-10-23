@@ -1,6 +1,9 @@
 %{
-#include "parser.tab.h"
+#include "parser.h"
 %}
+
+%option nounput
+%option noinput
 
 DIGIT 	[0-9]
 LETTER	[a-zA-Z_]

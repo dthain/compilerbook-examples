@@ -20,6 +20,7 @@ for use by scanner.c.
 
 #include <math.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "expr.h"
 
 /*
@@ -53,6 +54,7 @@ struct expr * parser_result = 0;
 program : expr TOKEN_SEMI
 		{ parser_result = $1; return 0; }
 	;
+
 
 expr	: expr TOKEN_ADD term
 		{ $$ = expr_create(EXPR_ADD,$1,$3); }
@@ -89,4 +91,5 @@ useful.  In practice, it often does not.
 int yyerror( char *str )
 {
 	printf("parse error: %s\n",str);
+	return 0;
 }
