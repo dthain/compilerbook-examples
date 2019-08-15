@@ -1,8 +1,8 @@
-Starter Code for CMinor Project
+Starter Code for BMinor Project
 -------------------------------
 
-This directory contains the starter code for the CMinor compiler.
-You are *required* to use these header files as the basis for your work.
+This directory contains the starter code for the BMinor compiler.
+Students in CSE 40243 are *required* to use these header files as the basis for your work.
 Trust us, it will get you started on the right track, and make it
 much easier for the instructors to help you with any difficulties.
 
