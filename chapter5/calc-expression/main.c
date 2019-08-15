@@ -21,7 +21,7 @@ int main( int argc, char *argv[] )
 		printf("parse successful: ");
 		expr_print(parser_result);
 		printf("\n");
-		printf("evaluates to: %lg\n",expr_evaluate(parser_result));
+		printf("evaluates to: %d\n",expr_evaluate(parser_result));
 		return 0;
 	} else {
 		printf("parse failed!\n");

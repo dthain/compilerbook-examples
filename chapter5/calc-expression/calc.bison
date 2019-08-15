@@ -7,7 +7,7 @@ for use by scanner.c.
 
 %token TOKEN_ID
 %token TOKEN_INTEGER
-%token TOKEN_FLOAT
+%token TOKEN_INT
 %token TOKEN_SEMI
 %token TOKEN_PLUS
 %token TOKEN_MINUS
@@ -76,8 +76,8 @@ factor	: TOKEN_LPAREN expr TOKEN_RPAREN
 		{ $$ = $2; }
 	| TOKEN_MINUS factor
 		{ $$ = expr_create(EXPR_SUBTRACT,expr_create_value(0),$2); }
-	| TOKEN_FLOAT
-		{ $$ = expr_create_value(atof(yytext)); }
+	| TOKEN_INT
+		{ $$ = expr_create_value(atoi(yytext)); }
 	;
 
 %%

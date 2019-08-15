@@ -11,7 +11,7 @@ LETTER	[a-zA-Z_]
 %%
 
 [ \n\r\t]*		;
-{DIGIT}*(\.{DIGIT}*)?	return TOKEN_FLOAT;
+{DIGIT}*                return TOKEN_INT;
 {LETTER}*		return TOKEN_ID;
 \*			return TOKEN_MUL;
 \+			return TOKEN_PLUS;

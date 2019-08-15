@@ -8,7 +8,7 @@ Main program of calculator example.
 extern int yyparse();
 
 /* Clunky: Declare the result of the parser from parser.bison */
-extern double parser_result;
+extern int parser_result;
 
 int main( int argc, char *argv[] )
 {
@@ -16,7 +16,7 @@ int main( int argc, char *argv[] )
 	printf("Enter an infix expression using the operators +-*/() ending with ;\n\n");
 
 	if(yyparse()==0) {
-		printf("result: %lf\n",parser_result);
+		printf("result: %d\n",parser_result);
 		return 0;
 	} else {
 		printf("parse failed!\n");

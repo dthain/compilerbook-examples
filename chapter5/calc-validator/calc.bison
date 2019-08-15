@@ -7,7 +7,7 @@ for use by scanner.c.
 
 %token TOKEN_ID
 %token TOKEN_INTEGER
-%token TOKEN_FLOAT
+%token TOKEN_INT
 %token TOKEN_SEMI
 %token TOKEN_PLUS
 %token TOKEN_MINUS
@@ -51,7 +51,7 @@ term	: term TOKEN_MUL factor
 
 factor	: TOKEN_MINUS factor
 	| TOKEN_LPAREN expr TOKEN_RPAREN
-	| TOKEN_FLOAT
+	| TOKEN_INT
 	;
 
 %%

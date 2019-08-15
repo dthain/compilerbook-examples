@@ -21,7 +21,7 @@ struct expr * expr_create( expr_t kind, struct expr *left, struct expr *right )
 	return e;
 }
 
-struct expr * expr_create_value( double value )
+struct expr * expr_create_value( int value )
 {
 	struct expr *e = expr_create(EXPR_VALUE,0,0);
 	e->value = value;
@@ -70,7 +70,7 @@ void expr_print( struct expr *e )
 			printf("/");
 			break;
 		case EXPR_VALUE:
-			printf("%lg",e->value);
+			printf("%d",e->value);
 			break;
 	}
 
@@ -83,13 +83,13 @@ Recursively evaluate an expression by performing
 the desired operation and returning it up the tree.
 */
 
-double expr_evaluate( struct expr *e )
+int expr_evaluate( struct expr *e )
 {
 	/* Careful: Return zero on null pointer. */
 	if(!e) return 0;
 
-	double l = expr_evaluate(e->left);
-	double r = expr_evaluate(e->right);
+	int l = expr_evaluate(e->left);
+	int r = expr_evaluate(e->right);
 
 	switch(e->kind) {
 		case EXPR_ADD:
