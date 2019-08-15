@@ -13,10 +13,10 @@ LETTER	[a-zA-Z_]
 [ \n\r\t]*		;
 {DIGIT}*(\.{DIGIT}*)?	return TOKEN_FLOAT;
 {LETTER}*		return TOKEN_ID;
-\*			return TOKEN_MULTIPLY;
-\+			return TOKEN_ADD;
-\-			return TOKEN_SUBTRACT;
-\/			return TOKEN_DIVIDE;
+\*			return TOKEN_MUL;
+\+			return TOKEN_PLUS;
+\-			return TOKEN_MINUS;
+\/			return TOKEN_DIV;
 \(			return TOKEN_LPAREN;
 \)			return TOKEN_RPAREN;
 \;			return TOKEN_SEMI;

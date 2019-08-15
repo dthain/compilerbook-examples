@@ -9,10 +9,10 @@ for use by scanner.c.
 %token TOKEN_INTEGER
 %token TOKEN_FLOAT
 %token TOKEN_SEMI
-%token TOKEN_ADD
-%token TOKEN_SUBTRACT
-%token TOKEN_MULTIPLY
-%token TOKEN_DIVIDE
+%token TOKEN_PLUS
+%token TOKEN_MINUS
+%token TOKEN_MUL
+%token TOKEN_DIV
 %token TOKEN_LPAREN
 %token TOKEN_RPAREN
 
@@ -55,17 +55,17 @@ program : expr TOKEN_SEMI
 		{ parser_result = $1; return 0; }
 	;
 
-expr	: expr TOKEN_ADD term
+expr	: expr TOKEN_PLUS term
 		{ $$ = $1 + $3; }
-	| expr TOKEN_SUBTRACT term
+	| expr TOKEN_MINUS term
 		{ $$ = $1 - $3; }
 	| term
 		{ $$ = $1; }
 	;
 
-term	: term TOKEN_MULTIPLY factor
+term	: term TOKEN_MUL factor
 		{ $$ = $1 * $3; }
-	| term TOKEN_DIVIDE factor
+	| term TOKEN_DIV factor
 		{
 			if($3==0) {
 	 			printf("runtime error: divide by zero\n");
@@ -79,7 +79,7 @@ term	: term TOKEN_MULTIPLY factor
 
 factor	: TOKEN_LPAREN expr TOKEN_RPAREN
 		{ $$ = $2; }
-	| TOKEN_SUBTRACT factor
+	| TOKEN_MINUS factor
 		{ $$ = -$2; }
 	| TOKEN_FLOAT
 		{ $$ = atof(yytext); }
