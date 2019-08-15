@@ -20,7 +20,7 @@ flex to parse arithmetic expressions and convert them into
 a simple abstract syntax tree of expressions. This 
 would be a good place to start as you design your compiler.
 
-- bminor contains the starter code for the B-Minor project.
+- starter-code contains the starter code for the B-Minor project.
 This incorporates the header files defined in the text book,
 and gives a simple structure that will help to avoid some
 common software engineering pitfalls.
