@@ -1,24 +1,21 @@
 Example Code for Introduction to Compilers and Language Design
 --------------------------------------------------------------
 
-This repository contains example code and test cases
+This repository contains some example code and test cases
 for the [Introduction to Compilers and Language Design](http://compilerbook.org)
 online textbook.
 
-for the CSE 40243 compilers course at the University of Notre Dame.
+- chapter3/flex contains a complete example of the flex
+program from chapter 3.
 
-- calc0 contains an *incorrect* example that attempts to
-parse arithmetic expressions using bison, but is full
-of shift-reduce conflits.
+- chapter4/hand-written contains a complete hand-written
+scanner and parser using the recursive descent technique
+for LL(1) grammars shown in chapter 4.
 
-- calc1 contains a *correct* example of using bison and flex
-together to parse and evaluate simple arithmetic expressions,
-by computing results as they are parsed.
-
-- calc2 contains a more complex example of using bison and
-flex to parse arithmetic expressions and convert them into
-a simple abstract syntax tree of expressions. This 
-would be a good place to start as you design your compiler.
+- chapter5 contains several variations on the running
+calculator example, showing an *incorrect* example with
+multiple shift-reduce conflicts, a working validator,
+inline evaluator, and interpreter.
 
 - starter-code contains the starter code for the B-Minor project.
 This incorporates the header files defined in the text book,
