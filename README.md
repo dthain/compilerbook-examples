@@ -2,7 +2,7 @@ Example Code for Introduction to Compilers and Language Design
 --------------------------------------------------------------
 
 This repository contains example code and test cases
-for the [Introduction to Compilers and Language Design] (http://compilerbook.org)
+for the [Introduction to Compilers and Language Design](http://compilerbook.org)
 online textbook.
 
 for the CSE 40243 compilers course at the University of Notre Dame.
