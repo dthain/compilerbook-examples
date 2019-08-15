@@ -1,0 +1,18 @@
+
+# The top level rule indicates how to link everything together into calc
+
+calc: main.o scanner.o parser.o
+	gcc main.o scanner.o parser.o -o calc -lm
+
+# This pattern indicates that any .o file depends
+# upon the .c file of the same name, and all of the .h files.
+# So, if a .o file is needed, it is built automatically.
+
+%.o: %.c *.h
+	gcc -Wall -c -g $< -o $@
+
+# clean causes all intermediate files to be deleted.
+
+clean:
+	rm -f *.o calc
+

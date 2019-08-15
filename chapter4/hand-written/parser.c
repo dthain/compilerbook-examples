@@ -1,3 +1,9 @@
+
+#include "parser.h"
+#include "scanner.h"
+
+#include <stdio.h>
+
 int parse_P()
 {
 	return parse_E() && expect_token(TOKEN_EOF);
@@ -43,7 +49,7 @@ int parse_F()
 	} else if(t == TOKEN_INT) {
 		return 1;
 	} else {
-		printf("parse error: unexpected token %s\n", token_string(t));
+		printf("parse error: unexpected token: %s", token_string(t));
 		return 0;
 	}
 }
