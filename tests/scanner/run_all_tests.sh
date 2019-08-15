@@ -1,8 +1,8 @@
 #!/bin/sh
 
-for testfile in good*.cminor
+for testfile in good*.bminor
 do
-	if cminor -scan $testfile > $testfile.out
+	if bminor -scan $testfile > $testfile.out
 	then
 		echo "$testfile success (as expected)"
 	else
@@ -10,9 +10,9 @@ do
 	fi
 done
 
-for testfile in bad*.cminor
+for testfile in bad*.bminor
 do
-	if cminor -scan $testfile > $testfile.out
+	if bminor -scan $testfile > $testfile.out
 	then
 		echo "$testfile success (INCORRECT)"
 	else

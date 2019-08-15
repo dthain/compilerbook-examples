@@ -1,10 +1,3 @@
-/*
-Copyright (C) 2003-2004 Douglas Thain and the University of Wisconsin
-Copyright (C) 2005- The University of Notre Dame
-This software is distributed under the GNU General Public License.
-See the file COPYING for details.
-*/
-
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
@@ -18,7 +11,7 @@ h = hash_table_create(0,0);
 FILE * file = fopen(pathname,"r");
 
 hash_table_insert(h,pathname,file);
-file = hash_table_remove(h,pathname);
+file = hash_table_lookup(h,pathname);
 
 </pre>
 

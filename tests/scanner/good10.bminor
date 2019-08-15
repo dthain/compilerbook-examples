@@ -1,4 +1,4 @@
-/* tests some more constructs in cminor */
+/* tests some more constructs in bminor */
 z = -x; // unary negation
 x^2; //exponantiotion
 //simple test cases

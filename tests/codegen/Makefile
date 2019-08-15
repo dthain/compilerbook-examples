@@ -16,9 +16,9 @@ maze: maze.o library.o
 %.o: %.c
 	gcc -c $< -o $@ -g
 
-%.s: %.cminor
-	echo "*** Make sure to put cminor in your PATH! ***"
-	cminor -codegen $< $@
+%.s: %.bminor
+	echo "*** Make sure to put bminor in your PATH! ***"
+	bminor -codegen $< $@
 
 clean:
 	rm -f *.o *.s *~ fibonnacci bounce maze

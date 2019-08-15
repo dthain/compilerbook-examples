@@ -42,10 +42,10 @@ like "parameter 3" or "global integer x".
 
 For the code generation assignment:
 
-The module 'library.c' contains the "standard library" for cminor,
+The module 'library.c' contains the "standard library" for bminor,
 which is needed to implement the print statement and the exponentiation
 operator.  You are welcome to add items to the library if you find
 it helpful.  Set up your Makefile carefully: library.c should be
-linked against a compiled cminor program, not against the compiler itself.
+linked against a compiled bminor program, not against the compiler itself.
 
 

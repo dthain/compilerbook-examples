@@ -1,7 +1,7 @@
 /*
-This is the standard library of functions for cminor, implemented in C.  
-The print statement in C-minor expects there to exist a function
-for each type that can be printed.  So, the following cminor code:
+This is the standard library of functions for bminor, implemented in C.  
+The print statement in bminor expects there to exist a function
+for each type that can be printed.  So, the following bminor code:
 
 x: int = 10;
 b: boolean = true;
@@ -15,7 +15,7 @@ print_integer(x);
 print_boolean(b);
 print_string(s);
 
-And the following cminor code:
+And the following bminor code:
 
 x = a ^ b;
 

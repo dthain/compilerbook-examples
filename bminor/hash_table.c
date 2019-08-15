@@ -1,10 +1,3 @@
-/*
-Copyright (C) 2003-2004 Douglas Thain and the University of Wisconsin
-Copyright (C) 2005- The University of Notre Dame
-This software is distributed under the GNU General Public License.
-See the file COPYING for details.
-*/
-
 #include "hash_table.h"
 
 #include <stdlib.h>
@@ -308,8 +301,9 @@ mod a prime (mod is sooo slow!).  If you need less than 32 bits,
 use a bitmask.  For example, if you need only 10 bits, do
   h = (h & hashmask(10));
 In which case, the hash table should have hashsize(10) elements. If you are hashing n strings (ub1 **)k, do it like this:
-  for (i=0, h=0; i<n; ++i) h = hash( k[i], len[i], h); By Bob Jenkins, 1996.  bob_jenkins@burtleburtle.net.  You may use this
-code any way you wish, private, educational, or commercial.  It's free. See http://burtleburtle.net/bob/hash/evahash.html
+  for (i=0, h=0; i<n; ++i) h = hash( k[i], len[i], h);
+
+By Bob Jenkins, 1996.  bob_jenkins@burtleburtle.net.  You may use this code any way you wish, private, educational, or commercial.  It's free. See http://burtleburtle.net/bob/hash/evahash.html
 Use for hash table lookup, or anything where one collision in 2^^32 is
 acceptable.  Do NOT use for cryptographic purposes.
 --------------------------------------------------------------------
@@ -369,5 +363,3 @@ unsigned hash_string(const char *s)
 {
 	return jenkins_hash((const ub1 *) s, strlen(s), 0);
 }
-
-/* vim: set noexpandtab tabstop=4: */
