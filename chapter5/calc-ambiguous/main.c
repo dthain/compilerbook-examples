@@ -1,5 +1,6 @@
 /*
 Main program of calculator example.
+Validate whether the input matches the grammar.
 */
 
 #include <stdio.h>
@@ -7,19 +8,16 @@ Main program of calculator example.
 /* Clunky: Declare the parse function generated from parser.bison */
 extern int yyparse();
 
-/* Clunky: Declare the result of the parser from parser.bison */
-extern int parser_result;
-
 int main( int argc, char *argv[] )
 {
-	printf("CSE 40243 Expression Interpreter\n");
+	printf("CSE 40243 Expression Validator\n");
 	printf("Enter an infix expression using the operators +-*/() ending with ;\n\n");
 
 	if(yyparse()==0) {
-		printf("result: %d\n",parser_result);
+		printf("Parse successful!\n");
 		return 0;
 	} else {
-		printf("parse failed!\n");
+		printf("Parse failed.\n");
 		return 1;
 	}
 }

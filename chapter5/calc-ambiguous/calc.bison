@@ -30,43 +30,22 @@ extern char *yytext;
 extern int yylex();
 extern int yyerror( char *str );
 
-/*
-Clunky: Keep the final result of the parse in a global variable,
-so that it can be retrieved by main().
-*/
-
-double parser_result = 0.0;
-
 %}
 
 %%
 
 /* Here is the grammar: program is the start symbol. */
 
-program : expr TOKEN_SEMI
-		{ parser_result = $1; return 0; }
+program : expr TOKEN_SEMI { return 0; }
 	;
 
 expr	: expr TOKEN_PLUS expr
-		{ $$ = $1 + $3; }
 	| expr TOKEN_MINUS expr
-		{ $$ = $1 - $3; }
 	| expr TOKEN_MUL expr
-		{ $$ = $1 * $3; }
 	| expr TOKEN_DIV expr
-		{
-			if($3==0) {
-	 			printf("runtime error: divide by zero\n");
-				exit(1);
-			}
-			$$ = $1 / $3;
-		}
 	| TOKEN_MINUS expr
-		{ $$ = -$2; }
 	| TOKEN_LPAREN expr TOKEN_RPAREN
-		{ $$ = $2; }
 	| TOKEN_INT
-		{ $$ = atoi(yytext); }
 	;
 
 %%
