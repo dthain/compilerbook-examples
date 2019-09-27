@@ -36,7 +36,7 @@ extern int yyerror( char *str );
 
 /* Here is the grammar: program is the start symbol. */
 
-program : expr TOKEN_SEMI
+program : expr TOKEN_SEMI { return 0; }
 	;
 
 expr	: expr TOKEN_PLUS term
