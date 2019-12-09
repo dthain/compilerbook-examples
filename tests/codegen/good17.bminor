@@ -1,6 +1,9 @@
-// tests strings/string comparisions (compares addressses)
+// tests strings and string comparisions
+// and use of strings as local variables
+
 str:string = "hello";
 str2:string = " world";
+
 main:function integer () =
 {
 	str3:string = str;
