@@ -22,6 +22,8 @@ COMPILER=$1
 MODE=$2
 TESTDIR=$3
 
+LINES=-------------------------------------------
+
 for testfile in ${TESTDIR}/good*.bminor
 do
 	if ${COMPILER} ${MODE} $testfile > $testfile.out
@@ -30,9 +32,14 @@ do
 	else
 		echo "$testfile failure (INCORRECT)"
 		echo ${LINES}
+		echo Test Input:
+		echo ${LINES}
 		cat $testfile
 		echo ${LINES}
+		echo Your Output:
+		echo ${LINES}
 		cat $testfile.out
+		echo ${LINES}
 	fi
 done
 
@@ -42,7 +49,11 @@ do
 	then
 		echo "$testfile success (INCORRECT)"
 		echo ${LINES}
+		echo Test Input:
+		echo ${LINES}
 		cat $testfile
+		echo ${LINES}
+		echo Your Output:
 		echo ${LINES}
 		cat $testfile.out
 		echo ${LINES}
