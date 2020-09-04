@@ -26,7 +26,7 @@ LINES=-------------------------------------------
 
 for testfile in ${TESTDIR}/good*.bminor
 do
-	if ${COMPILER} ${MODE} $testfile > $testfile.out
+	if ${COMPILER} ${MODE} $testfile > $testfile.out 2>&1
 	then
 		echo "$testfile success (as expected)"
 	else
@@ -45,7 +45,7 @@ done
 
 for testfile in ${TESTDIR}/bad*.bminor
 do
-	if ${COMPILER} ${MODE} $testfile > $testfile.out
+	if ${COMPILER} ${MODE} $testfile > $testfile.out 2>&1
 	then
 		echo "$testfile success (INCORRECT)"
 		echo ${LINES}
