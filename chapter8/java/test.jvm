@@ -1,0 +1,27 @@
+Compiled from "test.java"
+class test {
+  test();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  float f(int, int, float);
+    Code:
+       0: iload_1
+       1: i2f
+       2: fload_3
+       3: fmul
+       4: fload_3
+       5: fmul
+       6: iload_2
+       7: i2f
+       8: fload_3
+       9: fmul
+      10: fadd
+      11: ldc           #2                  // float 100.0f
+      13: fadd
+      14: fstore        4
+      16: fload         4
+      18: freturn
+}

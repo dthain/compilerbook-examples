@@ -1,0 +1,22 @@
+f (int a, int b, float x)
+{
+  float D.1728;
+  float D.1729;
+  float D.1730;
+  float D.1731;
+  float D.1732;
+  float D.1733;
+  float D.1734;
+  float y;
+
+  D.1728 = (float) a;
+  D.1729 = D.1728 * x;
+  D.1730 = D.1729 * x;
+  D.1731 = (float) b;
+  D.1732 = D.1731 * x;
+  D.1733 = D.1730 + D.1732;
+  y = D.1733 + 1.0e+2;
+  D.1734 = y;
+  return D.1734;
+}
+
