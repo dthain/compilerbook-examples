@@ -1,0 +1,4 @@
+/* A program is a not a sequence of statements */
+
+print "hello world";
+return 5;

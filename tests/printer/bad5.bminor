@@ -1,0 +1,6 @@
+/* Print statement must separate elemnts with a comma */
+
+main:function void()
+{
+	print x y z;
+}

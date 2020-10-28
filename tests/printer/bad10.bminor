@@ -1,0 +1,12 @@
+/* Unbalanced braces */
+
+main:function integer ( x: integer ) =
+{
+	if(x<10) {
+              if(x!=23) {
+                  print "hello";
+              } else {
+                  print "goodbye";
+              }
+        print "too few braces";
+}

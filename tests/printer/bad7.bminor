@@ -1,0 +1,6 @@
+/* No invalid seqeuences of operators */
+
+main:function integer ( x:integer ) = {
+
+        return x + * 5 * - 7;
+}

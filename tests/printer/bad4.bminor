@@ -1,0 +1,7 @@
+/* For loop does need to have semis even if parts are missing */
+
+main: function void() =
+{
+        i: integer;
+	for(i=0;) print i;
+}

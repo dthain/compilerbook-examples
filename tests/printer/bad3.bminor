@@ -1,0 +1,8 @@
+/* Cannot have more elses than ifs */
+
+simplefunc: function void () = {
+     x: integer = 10;
+     y: integer = 20;
+
+     if(x<y) if(y>x) else print "a"; else print "b" else print "c";
+}

@@ -1,0 +1,12 @@
+/* Function prototypes are declarations without bodies. */
+
+ComputeAscii: function char ( c: char );
+
+GetLength: function integer ( s: string, i: integer );
+
+/* Function body has some code in it */
+
+GetArea: function integer ( width: integer, height: integer ) =
+{
+	return width * height;
+}
