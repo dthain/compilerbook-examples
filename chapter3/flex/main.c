@@ -7,7 +7,7 @@ extern char *yytext;
 
 int main()
 {
-	yyin = fopen("program.c","r");
+	yyin = fopen("program.bminor","r");
 	if(!yyin) {
 		printf("could not open program.c!\n");
 		return 1;
