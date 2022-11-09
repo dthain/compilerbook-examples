@@ -1,25 +1,26 @@
-// test functions declerations
+/* Test function declarations without prototypes. */
 
-//test1:function integer (a:integer, b:integer);
-//test2:function boolean (a:integer, b:integer);
-//test3:function string (a:integer);
-
-main:function void ()=
-{
-
-}
-test1:function integer (a:integer, b:integer)=
+test1: function integer (a:integer, b:integer)=
 {
 	return a + b;
 }
-test2:function boolean (a:integer, b:integer)=
+
+test2: function boolean (a:integer, b:integer)=
 {
-	return test2(a, b);
+	return a < b;
 }
-test3:function char (a:integer)=
+
+test3: function char (a:integer)=
 {
-	if (a > 5)
-	{
-		return 'a';
+	if (a > 5) {
+		return 'x';
+	} else {
+		return 'y';
 	}
 }
+
+main:function void ()=
+{
+	print test1(10,20), test2(30,40), test3(10), "\n";
+}
+

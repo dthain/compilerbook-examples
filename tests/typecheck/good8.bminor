@@ -1,5 +1,7 @@
-// test 1d array assignments
+/* Update one element of an array. */
+
 x:array [5] integer = {1,2,3,4,5};
+
 main:function void () =
 {
 	x[4] = 4;

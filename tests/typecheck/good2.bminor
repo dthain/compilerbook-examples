@@ -1,12 +1,16 @@
-// assign integer expression to local variable/ typechecking
-x:integer = 5;
-y:integer = 10;
-test:function integer();
-main:function void ()=
+/* Assign an integer expression to local variable. */
+
+x: integer = 5;
+y: integer = 10;
+
+test: function integer();
+
+main: function void ()=
 {
 	x:integer = y * 10 + 15 - test();
 }
-test:function integer () =
+
+test: function integer () =
 {
 	return 5;
 }

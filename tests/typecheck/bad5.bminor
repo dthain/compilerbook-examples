@@ -1,6 +1,8 @@
-// Test incompatible types
+/* Check for invalid type inside of boolean expression. */
+
 y:integer = 10;
-main:function void ()=
+
+main: function void () =
 {
 	if(y > 5 && 'a' || true)
 	{

@@ -1,14 +1,17 @@
-// test character comparisions/headers
-charFxn: function char(x:char)=
+/* Use character types in various contexts. */
+
+charFxn: function char(x: char)=
 {
 	if(x == 'a')
 	{
 		return 'z';
 	}
 }
-main:function void ()=
+
+main: function void ()=
 {
-c:char;
+	c: char;
+
 	if('a' == charFxn('c'))
 	{
 		print "unreachable";
@@ -21,6 +24,5 @@ c:char;
 	{
 		print "unreachable";
 	}
-
 }
 

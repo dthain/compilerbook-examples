@@ -1,5 +1,7 @@
-// test 1d array assignments to a literal
+/* Cannot assign a scalar value to an array. */
+
 x:array [5] integer = {1,2,3,4,5};
+
 main:function void () =
 {
 	x = 4;

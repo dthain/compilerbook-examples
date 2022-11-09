@@ -1,20 +1,24 @@
-// wrong function prototype
+/* Function definitions must match prior prototypes. */
 
- test1:function integer (a:integer, b:integer);
-test2:function boolean (a:integer, b:integer);
-test3:function string (a:integer);
+test1: function integer (a:integer, b:integer);
+test2: function boolean (a:integer, b:integer);
+test3: function string (a:integer);
 
-main:function void ()=
+main: function void () =
 {
-	str:string = "hi";
-	
+	str: string = "hi";
 }
-//mismatched return type
-test3:function string (a:integer)=
+
+/* Parameter type differs from prototype. */
+
+test3: function string (a:boolean) =
 {
 	return "hello!";
 }
-test2:function integer (a:integer, b:integer) =
+
+/* Return type differs from prototype. */
+
+test2: function integer (a:integer, b:integer) =
 { 
 	return a + b;
 }
