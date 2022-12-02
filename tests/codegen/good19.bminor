@@ -24,7 +24,7 @@ main: function integer ( argc: integer, argv: array [] string ) =
 	print "Table of Fibonnacci Numbers\n";
 
 	for(i=0;i<30;i=i+1) {
-		print i, "\t", fib(i), "\n";
+		print i, " ", fib(i), "\n";
 	}
 
 	return 0;
